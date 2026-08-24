@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyPeFS/OXDSWdOlaAxDqyrR6",
+      "authorship_tag": "ABX9TyMvQF0Wdncn9y9f3Z0Q9t2n",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -25,6 +25,15 @@
       "source": [
         "<a href=\"https://colab.research.google.com/github/keerthanavenkatesan2007-sudo/DS-LAB/blob/main/1(c)deletion.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "INSERTION\n"
+      ],
+      "metadata": {
+        "id": "ogsQScIBgkf-"
+      }
     },
     {
       "cell_type": "code",
@@ -75,6 +84,15 @@
         "list_obj.atbeginning(\"sun\")\n",
         "list_obj.listprint()"
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "CREATION\n"
+      ],
+      "metadata": {
+        "id": "RJkfwzcBghSB"
+      }
     },
     {
       "cell_type": "code",
@@ -151,6 +169,15 @@
       ]
     },
     {
+      "cell_type": "markdown",
+      "source": [
+        "DELETION\n"
+      ],
+      "metadata": {
+        "id": "qwfKshTIgeDC"
+      }
+    },
+    {
       "cell_type": "code",
       "source": [
         "class Node:\n",
@@ -221,6 +248,65 @@
             "Thu\n",
             "Wed\n",
             "Mon\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "TRAVERSAL\n"
+      ],
+      "metadata": {
+        "id": "8DOP5lAXgYwD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Node:\n",
+        "    def __init__(self,data):\n",
+        "         self.data=data\n",
+        "         self.next=None\n",
+        "\n",
+        "class LinkedList:\n",
+        "    def __init__(self):\n",
+        "        self.head = None\n",
+        "\n",
+        "    def printList(self):\n",
+        "        temp = self.head\n",
+        "        while (temp):\n",
+        "            print(temp.data)\n",
+        "            temp = temp.next\n",
+        "\n",
+        "if __name__ == '__main__':\n",
+        "    llist = LinkedList()\n",
+        "\n",
+        "    llist.head = Node(1)\n",
+        "    second = Node(2)\n",
+        "    third = Node(3)\n",
+        "\n",
+        "    llist.head.next = second\n",
+        "    second.next = third\n",
+        "\n",
+        "    llist.printList()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "adv1k5SfedZQ",
+        "outputId": "4108d503-17e3-46f9-e80d-f795801fdb34"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n"
           ]
         }
       ]
